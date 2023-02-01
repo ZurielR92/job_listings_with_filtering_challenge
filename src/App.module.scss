@@ -1,0 +1,61 @@
+@import '/src/styles/theme.scss';
+
+.app {
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    align-items: center;
+    background: #f0fafb;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 156px;
+        background-image: url('../public/images/bg-header-mobile.svg');
+        background-color: hsl(180, 29%, 50%);
+    }
+    @include media-up ( sm ) {
+        &::before {
+            background-image: url('../public/images/bg-header-desktop.svg');
+        }
+    }
+}
+
+
+.filter_container {
+    width: 80vw;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba( 0,0,0,.2 );
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 70px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    @include media-up ( md ) {
+        flex-direction: row;
+    }
+    .tags {
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        padding: 20px;
+    }
+    .clear {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    @include media-up ( md ) {
+        width: 80vw;
+        max-width: 1200px;
+
+    }
+}

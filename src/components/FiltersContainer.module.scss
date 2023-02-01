@@ -1,0 +1,40 @@
+@import '/src/styles/theme.scss';
+
+.filterscontainer {
+    width: 80vw;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba( 0,0,0,.2 );
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 70px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    &.active {
+        opacity: 1;
+    }
+    @include media-up ( md ) {
+        flex-direction: row;
+    }
+    .tags {
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        padding: 20px;
+    }
+    .clear {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    @include media-up ( md ) {
+        width: 80vw;
+        max-width: 1200px;
+
+    }
+}

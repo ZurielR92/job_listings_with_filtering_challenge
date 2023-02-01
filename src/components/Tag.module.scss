@@ -1,0 +1,44 @@
+@import '/src/styles/theme.scss';
+
+.tag {
+    background: #edf6f5;
+    padding-left: 15px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    color: #64babb;
+    overflow: hidden;
+    align-items: center;
+    animation-name: fadeIn;
+    animation-duration: .2s;
+    cursor: pointer;
+    padding-right: 15px;
+    transition: all .2s ease-in-out;
+    &:hover {
+        color: #fff;
+        background: #64babb;
+        &.del {
+            color: #64babb;
+            background: #edf6f5;
+        }
+    }
+    &.del {
+        padding-right: 0;
+    }
+
+
+    > div {
+        height: 100%;
+        width: 30px;
+        margin-left: 10px;
+        display: flex;
+        background: #64babb;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        &:hover {
+            background: #2d3b3a;;
+        }
+    }
+}

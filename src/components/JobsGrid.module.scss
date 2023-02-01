@@ -1,0 +1,8 @@
+@import '/src/styles/theme.scss';
+
+.jobsgrid {
+    display: grid;
+    width: 80vw;
+    max-width: 1200px;
+    margin-bottom: 100px;
+}
